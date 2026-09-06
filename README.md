@@ -1,122 +1,45 @@
 # Junior Engineer Learning Track
 
-Standalone, self-driven programming curriculum — independent of any customer or company project.
-Goal: go from **Learned → Project Ready → Independent** across 13 core engineering skills, proven through real code, tests, and documentation (not tutorials).
+This repo is my personal workspace for practicing core Python and backend engineering skills every day. 
+
+Instead of just following tutorials, the goal here is to write actual code from scratch, run into bugs, write unit tests, and build small working projects.
 
 ---
 
-## How This Repo Is Organized
+## What I'm working on
 
-Each folder below is one skill. Inside each folder you'll find your practice exercises, the independent challenge for that skill, and a short `README.md` explaining what you built.
+I'm working through these topics one by one. Folders will start out as scratchpads and get refactored with clean code and tests as I finish each topic:
 
-```
-junior-engineer-learning-track/
-├── 01-python-fundamentals/
-├── 02-oop-modular-design/
-├── 03-pandas-excel/
-├── 04-sqlite/
-├── 05-git-github/
-├── 06-pytest-testing/
-├── 07-rest-api/
-├── 08-authentication-security/
-├── 09-streamlit/
-├── 10-debugging-logging/
-├── 11-windows-packaging/
-├── 12-documentation/
-└── capstone-asset-tracker/     <- final project combining everything
-```
-
-Each skill folder follows the same simple layout:
-```
-0X-skill-name/
-├── exercises/          <- guided practice programs
-├── independent/        <- the unassisted challenge for this skill
-├── tests/               <- pytest tests
-└── README.md            <- what this skill covers + how to run the code
-```
+- [x] **01-python-fundamentals** — *(Current)* Data structures, string formatting, file I/O, error handling
+- [ ] **02-oop-modular-design** — Classes, inheritance, dataclasses, cleaner project structure
+- [ ] **03-pandas-excel** — Cleaning messy spreadsheets, pivot tables, CSV/Excel parsing
+- [ ] **04-sqlite** — CRUD operations, basic schema design, parameterized queries
+- [ ] **05-git-github** — Branching, rebasing, PR workflows, handling merge conflicts
+- [ ] **06-pytest-testing** — Unit testing, fixtures, mocking, edge case coverage
+- [ ] **07-rest-api** — Calling external APIs and building basic endpoints
+- [ ] **08-authentication-security** — Password hashing, JWT tokens, environment variables
+- [ ] **09-streamlit** — Quick internal UI and data dashboards
+- [ ] **10-debugging-logging** — Python's `logging` module, breakpoint debugging
+- [ ] **11-windows-packaging** — Packaging tools into standalone `.exe` binaries with PyInstaller
+- [ ] **12-documentation** — READMEs, API docstrings, simple architecture flowcharts
+- [ ] **capstone-asset-tracker** — Final project combining all the above into an internal asset tracker
 
 ---
 
-## Progress Tracker
-
-Progress for each skill is tracked in **`Junior_Programming_Training_Tracker.xlsx`** (kept outside this repo, or linked here if you choose to include it), using three levels:
-
-| Level | Meaning |
-|---|---|
-| **Learned** | Understand the concept, can complete guided exercises |
-| **Project Ready** | Can apply the skill in a real codebase following existing standards |
-| **Independent** | Can design, implement, test, debug, and explain the skill without step-by-step help |
-
-A skill is only marked complete once its **Independent Challenge** is done unassisted, with working tests, a README, and (where possible) a mentor review — not just because a tutorial was followed.
-
----
-
-## Skills Covered
-
-1. Python Fundamentals
-2. OOP & Modular Design
-3. Pandas & Excel
-4. SQLite
-5. Git & GitHub Workflow
-6. pytest & Testing
-7. REST / API Integration
-8. Authentication & Security
-9. Streamlit
-10. Debugging & Logging
-11. Windows Packaging
-12. Documentation
-13. **Capstone:** Asset Request & Tracking App (combines all of the above)
-
----
-
-## Submission Standard (applies to every skill folder)
-
-- All exercises committed to Git with meaningful commit messages
-- Every mini-project includes source code, tests, a README, and setup instructions
-- No secrets, passwords, or tokens ever committed to source code
-- Code is formatted consistently with clear, meaningful names
-- Every exercise includes at least one negative/error case
-- Code and tests are run locally before requesting any review
-- I can explain my own code line-by-line, at a high level, without notes
-
----
-
-## How to Run Anything in This Repo
+## Quick Start
 
 ```bash
-# clone the repo
-git clone <repo-url>
-cd junior-engineer-learning-track
-
-# set up a virtual environment
+# create and activate virtual environment
 python -m venv venv
-source venv/bin/activate      # Windows: venv\Scripts\activate
+venv\Scripts\activate
 
-# install dependencies for a specific skill folder
-pip install -r 0X-skill-name/requirements.txt
-
-# run tests for a specific skill folder
-pytest 0X-skill-name/tests/
+# run tests
+pytest
 ```
 
 ---
 
-## Status
-
-| Skill | Level |
-|---|---|
-| Python Fundamentals | 🟡 In Progress |
-| OOP & Modular Design | ⚪ Not Started |
-| Pandas & Excel | ⚪ Not Started |
-| SQLite | ⚪ Not Started |
-| Git & GitHub Workflow | ⚪ Not Started |
-| pytest & Testing | ⚪ Not Started |
-| REST / API Integration | ⚪ Not Started |
-| Authentication & Security | ⚪ Not Started |
-| Streamlit | ⚪ Not Started |
-| Debugging & Logging | ⚪ Not Started |
-| Windows Packaging | ⚪ Not Started |
-| Documentation | ⚪ Not Started |
-| Capstone | ⚪ Not Started |
-
-*(Update this table as you progress — 🟡 In Progress, 🟢 Learned, 🔵 Project Ready, ✅ Independent)*
+## Rules for myself
+1. Don't push code I can't explain in plain English.
+2. Always write at least 2-3 tests for error/edge cases before moving to the next folder.
+3. Keep commits small and commit as I go, not just at the end of the week.
