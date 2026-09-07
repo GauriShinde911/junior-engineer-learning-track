@@ -1,0 +1,3 @@
+Python is a popular programming language. Python is used for web development, data analysis, and automation.
+Learning Python is fun because Python has simple syntax and powerful built-in tools. Practice coding every day
+to get better at Python and software engineering.

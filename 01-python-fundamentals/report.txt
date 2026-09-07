@@ -1,0 +1,4 @@
+=== Sales Performance Report ===
+Total rows processed: 10
+Total revenue:        $9,769.40
+Best-selling item:    Notebook (120 units sold)
