@@ -24,6 +24,7 @@ Thumbs.db
 *.sqlite3
 *.db
 *.log
+!01-python-fundamentals/sample.log
 
 # Windows packaging builds
 build/
