@@ -1,29 +1,42 @@
-# 01. Python Fundamentals
+# 01 - Python Fundamentals & Expense Tracker
 
-## Overview
-Core Python concepts: data structures (lists, dicts, tuples, sets), control flow, functions, string manipulation, file I/O, error handling, and type hinting.
+This folder has my day-to-day Python practice scripts covering data structures, loops, file handling, and custom error handling.
 
----
-
-## Folder Structure
-
-```
-01-python-fundamentals/
-├── exercises/          <- Guided practice programs
-├── independent/        <- Unassisted challenge for this skill
-├── tests/               <- Automated pytest tests
-└── README.md            <- Documentation & instructions
-```
+The main mini-project here is `expense_tracker.py`, which pulls together logic from my earlier calculator and aggregator practice.
 
 ---
 
-## Instructions
+## What `expense_tracker.py` Does
 
-1. **Guided Exercises (`exercises/`)**: Work through the foundational practice problems.
-2. **Independent Challenge (`independent/`)**: Complete the challenge on your own without step-by-step assistance.
-3. **Testing (`tests/`)**: Write and run pytest tests for all solutions.
+It's a simple CLI expense manager that:
+- Lets you add expenses manually (`date`, `category`, `amount`).
+- Imports expenses from a `.csv` file (`date,category,amount`). If a row is corrupted, has negative numbers, or is missing fields, it skips that row with a warning instead of crashing the whole script.
+- Calculates and prints spending summaries grouped by category.
+- Exports recorded expenses out to a clean `.json` file.
 
+---
+
+## Other Practice Scripts in This Folder
+
+- `calculator.py` — basic math functions with divide-by-zero checks
+- `unit_converter.py` — km/miles and C/F converter with a menu loop
+- `grade_calculator.py` — score to letter grade mapping using if/elif
+- `pattern_generator.py` — nested loop star triangle
+- `inventory.py` — list of dictionaries and stock threshold filtering
+- `employee_directory.py` — dict searches + a demo of the list copy vs alias bug
+- `transaction_aggregator.py` — grouping spend totals by category
+- `log_parser.py` — custom `InvalidLogFormat` exception and reading `sample.log`
+
+---
+
+## How to Run
+
+### 1. Run the expense tracker
 ```bash
-# Run tests for this skill
-pytest 01-python-fundamentals/tests/
+python expense_tracker.py
+```
+
+### 2. Run the tests
+```bash
+python -m pytest test_expense_tracker.py
 ```
