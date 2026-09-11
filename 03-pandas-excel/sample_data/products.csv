@@ -1,0 +1,9 @@
+product_id,product,category,supplier,reorder_level
+P001,Laptop,Electronics,TechWorld,5
+P002,Mouse,Accessories,PeriphPlus,20
+P003,Keyboard,Electronics,PeriphPlus,15
+P004,Monitor,Electronics,TechWorld,3
+P005,Headphones,Accessories,AudioZone,10
+P006,Webcam,Accessories,PeriphPlus,8
+P007,Chair,Furniture,FurniturePro,4
+P008,Desk,Furniture,FurniturePro,2

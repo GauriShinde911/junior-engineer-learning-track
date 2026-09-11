@@ -1,0 +1,22 @@
+order_id,date,product,category,qty,unit_price,region,sales_rep
+ORD-001,2024-01-05,Laptop,Electronics,2,75000,West,Priya Sharma
+ORD-002,05/01/2024,Mouse,electronics,1,850,North,Rahul Gupta
+ORD-003,2024-01-08,Keyboard,Electronics,,1200,South,Anita Joshi
+ORD-004,January 10 2024,Monitor,Electronics,1,18500,East,Vikram Singh
+ORD-005,2024-01-12,Laptop,Electronics,3,75000,West,Priya Sharma
+ORD-002,05/01/2024,Mouse,electronics,1,850,North,Rahul Gupta
+ORD-006,2024-02-03,Headphones,Accessories,2,3500,West,Meena Pillai
+ORD-007,03-02-2024,Webcam,Accessories,1,2200,,Rahul Gupta
+ORD-008,2024-02-14,Chair,Furniture,5,8900,North,
+ORD-009,2024-02-20,Desk,furniture,2,12400,East,Vikram Singh
+ORD-010,2024-03-01,Laptop,Electronics,1,75000,South,Anita Joshi
+ORD-011,2024-03-05,Monitor,Electronics,2,18500,West,Priya Sharma
+ORD-012,2024-03-10,Mouse,Accessories,10,850,North,Rahul Gupta
+ORD-013,2024-03-15,Keyboard,Electronics,3,1200,East,Vikram Singh
+ORD-014,2024-03-22,Headphones,Accessories,,3500,South,Meena Pillai
+ORD-015,2024-04-02,Webcam,Accessories,4,2200,West,Priya Sharma
+ORD-016,2024-04-10,Chair,Furniture,2,8900,North,Rahul Gupta
+ORD-017,2024-04-18,Desk,Furniture,1,12400,East,Anita Joshi
+ORD-018,2024-04-25,Laptop,Electronics,2,75000,South,Vikram Singh
+ORD-019,2024-05-03,Monitor,electronics,1,18500,West,Priya Sharma
+ORD-020,2024-05-11,Mouse,Accessories,6,850,North,Meena Pillai
