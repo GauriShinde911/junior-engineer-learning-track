@@ -12,7 +12,7 @@ I'm working through these topics one by one. Folders will start out as scratchpa
 
 - [x] **01-python-fundamentals** — *(Current)* Data structures, string formatting, file I/O, error handling
 - [x] **02-oop-modular-design** — Classes, inheritance, dataclasses, cleaner project structure
-- [ ] **03-pandas-excel** — Cleaning messy spreadsheets, pivot tables, CSV/Excel parsing
+- [x] **03-pandas-excel** — Cleaning messy spreadsheets, pivot tables, CSV/Excel parsing
 - [ ] **04-sqlite** — CRUD operations, basic schema design, parameterized queries
 - [ ] **05-git-github** — Branching, rebasing, PR workflows, handling merge conflicts
 - [ ] **06-pytest-testing** — Unit testing, fixtures, mocking, edge case coverage
