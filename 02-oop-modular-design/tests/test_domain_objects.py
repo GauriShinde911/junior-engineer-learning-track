@@ -1,18 +1,19 @@
 """
-Unit Tests for exercises/domain_objects.py
+Unit Tests for exercises/2.1-classes-encapsulation/domain_objects.py
 """
 
 import sys
 from pathlib import Path
 import pytest
 
-# Ensure exercises folder is on python path
+# Ensure the 2.1 subsection folder is on the Python path
 TEST_DIR = Path(__file__).resolve().parent
 MODULE_DIR = TEST_DIR.parent
+SUBSECTION_DIR = MODULE_DIR / "exercises" / "2.1-classes-encapsulation"
 sys.path.insert(0, str(MODULE_DIR))
-sys.path.insert(0, str(MODULE_DIR / "exercises"))
+sys.path.insert(0, str(SUBSECTION_DIR))
 
-from exercises.domain_objects import Product, Customer, Order, Invoice
+from domain_objects import Product, Customer, Order, Invoice
 
 
 # =====================================================================
