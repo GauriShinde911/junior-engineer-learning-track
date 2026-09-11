@@ -1,0 +1,9 @@
+date,category,amount,description
+2026-01-05,Groceries,45.50,Weekly supermarket run
+2026-01-06,Transit,12.00,Subway metro card
+2026-01-07,Utilities,85.20,Electricity bill
+BAD_ROW_CORRUPT_FORMAT
+2026-01-08,Dining,24.00,Lunch with team
+2026-01-09,Books,19.99,Python Architecture Book
+2026-01-10,Groceries,32.40,Fruit and dairy
+2026-01-11,Entertainment,-50.00,Invalid negative amount skipped

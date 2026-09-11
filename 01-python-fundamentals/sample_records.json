@@ -1,7 +1,0 @@
-[
-  { "name": "Alice Johnson", "age": 25, "city": "Seattle" },
-  { "name": "Bobby Green", "age": 16, "city": "Denver" },
-  { "name": "Charlie Davis", "age": 32, "city": "Austin" },
-  { "name": "Daisy Miller", "age": 14, "city": "Chicago" },
-  { "name": "Ethan Wright", "age": 28, "city": "New York" }
-]

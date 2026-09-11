@@ -1,7 +1,0 @@
-2026-01-05 10:00 | INFO | User admin logged in successfully
-2026-01-05 10:02 | DEBUG | Loading cache configuration
-INVALID LOG ENTRY WITHOUT DELIMITERS
-2026-01-05 10:05 | ERROR | Failed to connect to database at 192.168.1.50
-2026-01-05 10:08 | WARNING | Memory usage exceeded 85%
-2026-01-05 10:10 | BROKEN LINE WITH ONLY TWO PARTS
-2026-01-05 10:12 | INFO | Scheduled backup job completed
