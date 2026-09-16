@@ -1,0 +1,7 @@
+# 05-git-github local gitignore
+# Ensures all generated practice sandboxes are strictly ignored by Git
+
+sandbox/
+*/sandbox/
+**/sandbox/**
+*.sandbox/
