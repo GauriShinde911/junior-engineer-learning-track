@@ -12,14 +12,17 @@ session transitions, and input validation rules are implemented cleanly in the
 ================================================================================
 """
 
-import sys
+import importlib.util
 from pathlib import Path
 import pytest
 
-exercise_dir = Path(__file__).resolve().parent.parent / "exercises" / "9.2-forms-state"
-sys.path.insert(0, str(exercise_dir))
+app_path = Path(__file__).resolve().parent.parent / "exercises" / "9.2-forms-state" / "app.py"
+spec = importlib.util.spec_from_file_location("app_9_2", str(app_path))
+app_9_2 = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(app_9_2)
 
-from app import RegistrationWizard, AssetRegistrationData
+RegistrationWizard = app_9_2.RegistrationWizard
+AssetRegistrationData = app_9_2.AssetRegistrationData
 
 
 @pytest.fixture

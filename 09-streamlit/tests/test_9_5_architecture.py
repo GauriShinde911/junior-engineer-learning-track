@@ -4,22 +4,23 @@ Does not test st.* decorated functions (cache wrappers) — those require a
 running Streamlit server. Tests the underlying data transforms directly.
 """
 
+import importlib.util
+from pathlib import Path
 import pytest
 import pandas as pd
 import math
 
-import sys
-import os
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "exercises", "9.5-architecture"))
+app_path = Path(__file__).resolve().parent.parent / "exercises" / "9.5-architecture" / "app.py"
+spec = importlib.util.spec_from_file_location("app_9_5", str(app_path))
+app_9_5 = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(app_9_5)
 
-from app import (
-    simulate_slow_data_fetch,
-    compute_totals,
-    compute_category_summary,
-    get_top_n_products,
-    compute_qoq_growth,
-    validate_secrets_config,
-)
+simulate_slow_data_fetch = app_9_5.simulate_slow_data_fetch
+compute_totals = app_9_5.compute_totals
+compute_category_summary = app_9_5.compute_category_summary
+get_top_n_products = app_9_5.get_top_n_products
+compute_qoq_growth = app_9_5.compute_qoq_growth
+validate_secrets_config = app_9_5.validate_secrets_config
 
 
 class TestSimulateSlowDataFetch:

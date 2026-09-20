@@ -1,26 +1,27 @@
 """Tests for pure data logic in independent/app.py."""
 
+import importlib.util
+from pathlib import Path
 import pytest
 import pandas as pd
 from datetime import date
 
-import sys
-import os
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "independent"))
+app_path = Path(__file__).resolve().parent.parent / "independent" / "app.py"
+spec = importlib.util.spec_from_file_location("app_independent", str(app_path))
+app_independent = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(app_independent)
 
-from app import (
-    generate_sales_data,
-    filter_sales,
-    compute_kpis,
-    revenue_by_category,
-    revenue_by_month,
-    segment_breakdown,
-    detect_anomalies,
-    top_transactions,
-    CATEGORIES,
-    REGIONS,
-    SEGMENTS,
-)
+generate_sales_data = app_independent.generate_sales_data
+filter_sales = app_independent.filter_sales
+compute_kpis = app_independent.compute_kpis
+revenue_by_category = app_independent.revenue_by_category
+revenue_by_month = app_independent.revenue_by_month
+segment_breakdown = app_independent.segment_breakdown
+detect_anomalies = app_independent.detect_anomalies
+top_transactions = app_independent.top_transactions
+CATEGORIES = app_independent.CATEGORIES
+REGIONS = app_independent.REGIONS
+SEGMENTS = app_independent.SEGMENTS
 
 
 @pytest.fixture(scope="module")

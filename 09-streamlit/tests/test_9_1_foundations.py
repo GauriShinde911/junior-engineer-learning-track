@@ -13,20 +13,21 @@ KPI aggregation, and chart transformations into pure Python functions.
 ================================================================================
 """
 
-import sys
+import importlib.util
 from pathlib import Path
 import pandas as pd
 import pytest
 
-exercise_dir = Path(__file__).resolve().parent.parent / "exercises" / "9.1-foundations"
-sys.path.insert(0, str(exercise_dir))
+app_path = Path(__file__).resolve().parent.parent / "exercises" / "9.1-foundations" / "app.py"
+exercise_dir = app_path.parent
+spec = importlib.util.spec_from_file_location("app_9_1", str(app_path))
+app_9_1 = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(app_9_1)
 
-from app import (
-    load_data,
-    filter_dataset,
-    calculate_kpis,
-    prepare_chart_data
-)
+load_data = app_9_1.load_data
+filter_dataset = app_9_1.filter_dataset
+calculate_kpis = app_9_1.calculate_kpis
+prepare_chart_data = app_9_1.prepare_chart_data
 
 
 @pytest.fixture

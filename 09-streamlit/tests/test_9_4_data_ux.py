@@ -3,21 +3,22 @@
 Only tests functions that do not call st.* — UI is not directly testable.
 """
 
+import importlib.util
+from pathlib import Path
 import pandas as pd
 import pytest
 
-import sys
-import os
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "exercises", "9.4-data-ux"))
+app_path = Path(__file__).resolve().parent.parent / "exercises" / "9.4-data-ux" / "app.py"
+spec = importlib.util.spec_from_file_location("app_9_4", str(app_path))
+app_9_4 = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(app_9_4)
 
-from app import (
-    get_base_dataframe,
-    apply_filters,
-    sort_by_severity,
-    compute_summary_stats,
-    dataframe_to_csv_bytes,
-    SEVERITY_ORDER,
-)
+get_base_dataframe = app_9_4.get_base_dataframe
+apply_filters = app_9_4.apply_filters
+sort_by_severity = app_9_4.sort_by_severity
+compute_summary_stats = app_9_4.compute_summary_stats
+dataframe_to_csv_bytes = app_9_4.dataframe_to_csv_bytes
+SEVERITY_ORDER = app_9_4.SEVERITY_ORDER
 
 
 class TestGetBaseDataframe:
