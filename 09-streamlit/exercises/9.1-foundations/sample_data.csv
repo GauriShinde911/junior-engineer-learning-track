@@ -1,0 +1,13 @@
+department,month,revenue,target,satisfaction_score
+Engineering,Jan,45000,40000,4.6
+Engineering,Feb,52000,42000,4.7
+Engineering,Mar,61000,45000,4.8
+Marketing,Jan,32000,30000,4.2
+Marketing,Feb,34000,31000,4.1
+Marketing,Mar,39000,35000,4.3
+Sales,Jan,78000,75000,4.5
+Sales,Feb,82000,80000,4.4
+Sales,Mar,91000,85000,4.6
+Support,Jan,21000,20000,4.7
+Support,Feb,23000,22000,4.8
+Support,Mar,25000,24000,4.9
