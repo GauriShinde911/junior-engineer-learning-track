@@ -1,0 +1,6 @@
+{
+  "LAPTOP": {"name": "Pro Laptop", "price": 1200.00, "stock": 10},
+  "MOUSE": {"name": "Wireless Mouse", "price": 25.00, "stock": 50},
+  "KEYBOARD": {"name": "Mechanical Keyboard", "price": 100.00, "stock": 20},
+  "MONITOR": {"name": "4K Monitor", "price": 350.00, "stock": 5}
+}
