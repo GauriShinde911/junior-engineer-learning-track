@@ -14,6 +14,9 @@ curr_dir = Path(__file__).resolve().parent
 if str(curr_dir) not in sys.path:
     sys.path.insert(0, str(curr_dir))
 
+if "service" in sys.modules and not hasattr(sys.modules["service"], "ProjectRecordsService"):
+    del sys.modules["service"]
+
 from repository import ProjectRecordRepository
 from service import ProjectRecordsService
 from list_item_client import SharePointListItemClient

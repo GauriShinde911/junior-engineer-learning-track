@@ -5,8 +5,17 @@ Verifies that AssetService coordinates operations through the abstract
 repository interface with zero direct coupling to SharePoint or Graph API.
 """
 
+import sys
+from pathlib import Path
 import pytest
 from unittest.mock import Mock
+
+curr_dir = Path(__file__).resolve().parent
+if str(curr_dir) not in sys.path:
+    sys.path.insert(0, str(curr_dir))
+
+if "service" in sys.modules and not hasattr(sys.modules["service"], "AssetService"):
+    del sys.modules["service"]
 
 from sharepoint_repository_interface import SharePointRepositoryInterface
 from service import AssetService
