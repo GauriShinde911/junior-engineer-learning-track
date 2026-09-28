@@ -30,3 +30,7 @@ Thumbs.db
 build/
 dist/
 *.spec
+
+# Environment & credentials
+.env
+13-sharepoint-operations/**/.env
