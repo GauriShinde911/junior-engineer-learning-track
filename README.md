@@ -22,6 +22,7 @@ I'm working through these topics one by one. Folders will start out as scratchpa
 - [ ] **10-debugging-logging** — Python's `logging` module, breakpoint debugging
 - [ ] **11-windows-packaging** — Packaging tools into standalone `.exe` binaries with PyInstaller
 - [ ] **12-documentation** — READMEs, API docstrings, simple architecture flowcharts
+- [x] **13-sharepoint-operations** — *(Curriculum Section 9)* Microsoft Graph API, list CRUD, document operations, repository abstraction
 - [ ] **capstone-asset-tracker** — Final project combining all the above into an internal asset tracker
 
 ---
