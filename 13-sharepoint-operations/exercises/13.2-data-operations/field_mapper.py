@@ -37,14 +37,17 @@ class SharePointFieldMapper:
     def __init__(self, schema_definition: Dict[str, FieldDefinition]):
         self.schema = schema_definition
 
-    def to_sharepoint(self, python_data: Dict[str, Any]) -> Dict[str, Any]:
+    def to_sharepoint(self, python_data: Dict[str, Any], partial: bool = False) -> Dict[str, Any]:
         """Convert Python dictionary to SharePoint internal fields payload."""
         sp_payload = {}
 
         for py_key, field_def in self.schema.items():
+            if partial and py_key not in python_data:
+                continue
+
             val = python_data.get(py_key, field_def.default)
 
-            if field_def.required and (val is None or val == ""):
+            if not partial and field_def.required and (val is None or val == ""):
                 raise ValueError(f"Required field '{py_key}' is missing or empty.")
 
             if val is None:
